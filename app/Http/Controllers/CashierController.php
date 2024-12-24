@@ -9,9 +9,9 @@ class CashierController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function transaction()
     {
-        //
+        return view('pages.transaction');
     }
 
     /**
