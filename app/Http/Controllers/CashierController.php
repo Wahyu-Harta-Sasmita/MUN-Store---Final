@@ -24,10 +24,19 @@ class CashierController extends Controller
         return view('pages.products');
     }
 
-
     public function history()
     {
         return view('pages.history');
+    }
+
+    public function addProducts()
+    {
+        return view('pages.addProducts');
+    }
+
+    public function receipt()
+    {
+        return view('pages.receipt');
     }
 
     /**
