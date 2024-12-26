@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Produk;
 use Illuminate\Http\Request;
 
 class CashierController extends Controller
@@ -21,7 +22,10 @@ class CashierController extends Controller
 
     public function products()
     {
-        return view('pages.products');
+        $title="Daftar Produk";
+        $produk=new Produk;
+        $produk=Produk::paginate(2);
+        return view('pages.products', compact('title', 'produk'));
     }
 
     public function history()

@@ -37,7 +37,7 @@
         <div class="h-[60px] flex justify-between items-center px-4 bg-white">
           <h1 class="text-lg font-bold text-gray-800">Dashboard Cashier</h1>
           <div class="flex items-center space-x-2">
-            <div class="flex justify-center items-center rounded-full bg-gray-300 h-[40px] w-[40px]">
+            <div class="flex justify-center items-center rounded-full bg-gray-900 h-[40px] w-[40px]">
               <img src="{{ asset('assets/images/admin.png') }}" alt="Admin" class="w-[20px] h-[20px]" />
             </div>
             <span class="font-bold text-gray-600">Cashier</span>
