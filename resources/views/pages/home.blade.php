@@ -24,7 +24,7 @@
                   alt="cashier"
                   class="w-16 h-16 mb-2"
                 />
-                <h3 class="text-md font-semibold">Transaction</h3>
+                <a href="{{ route('transaction') }}" class="text-md font-semibold">Transaction</a>
               </div>
               <!-- CARD 1 End -->
 
@@ -37,7 +37,7 @@
                   alt="products"
                   class="w-16 h-16 mb-2"
                 />
-                <h3 class="text-md font-semibold">Products</h3>
+                <a href="{{ route('products') }}" class="text-md font-semibold">Products</a>
               </div>
               <!-- CARD 2 End -->
 
@@ -50,7 +50,7 @@
                   alt="history"
                   class="w-16 h-16 mb-2"
                 />
-                <h3 class="text-md font-semibold">History</h3>
+                <a href="{{ route('history') }}" class="text-md font-semibold">History</a>
               </div>
 
               <!-- CARD 3 End -->

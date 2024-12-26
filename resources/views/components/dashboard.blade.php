@@ -10,9 +10,9 @@
     <div class="flex">
       <!-- Sidebar Start -->
       <div class="h-[100vh] w-[250px]">
-        <div>
+        <a href="{{route('dashboard')}}">
           <img src="{{ asset('assets/images/Group 99.png') }}" alt="logo" class="w-[250px] h-[100px]" />
-        </div>
+        </a>
         <div class="flex items-center gap-2 pl-4 py-2 hover:bg-gray-500 hover:text-white">
           <img src="{{ asset('assets/images/dashboard.png') }}" alt="Dashboard" class="w-[20px] h-[20px]" />
           <a href="{{route('dashboard')}}">Dashboard</a>
