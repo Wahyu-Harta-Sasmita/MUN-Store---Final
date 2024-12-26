@@ -11,7 +11,7 @@ class Transaction extends Model
     public $primaryKey='id_transaction';
     protected $table='tb_transaction';
     protected $fillabe=[
-        'date', 'total_price', 'paid', 'return' 
+        'total_price', 'paid', 'return', 'created_at', 'updated_at', 
     ];
     public function transaction_detail(){
         return $this->hasMany(TransactionDetail::class, 'id_transaction', 'id_transaction');

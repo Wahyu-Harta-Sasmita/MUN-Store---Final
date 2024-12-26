@@ -9,14 +9,16 @@ class TransactionDetail extends Model
 {
     use HasFactory;
     public $primaryKey='id_detail';
-    protected $table='tb_transaction_detail';
+    protected $table='transaction_detail';
     protected $fillabe = [
-        'id_transaction', 'id_product', 'quantity', 'sub_total'
+        'id_transaction', 'id_product', 'quantity', 'sub_total', 'created_at', 'updated_at'
     ];
-    public function transactions() {
+    public function transaction() {
         return $this->belongsTo(Transaction::class, 'id_transaction', 'id_transaction');
     }
     public function produk() {
         return $this->belongsTo(Produk::class, 'id_product', 'id_product');
     }
+
+    
 }

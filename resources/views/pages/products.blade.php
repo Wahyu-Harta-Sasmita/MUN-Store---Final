@@ -6,7 +6,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <!-- Add Product Button -->
                     <div class="mb-4 flex justify-end">
-                        <a class="bg-main text-white px-4 py-2 rounded">
+                        <a href="#" class="bg-main text-white px-4 py-2 rounded">
                             + Add Product
                         </a>
                     </div>
@@ -25,20 +25,20 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ( $produk as $item )
+                            @forelse ($produk as $item)
                                 <tr class="text-center">
                                     <td class="border border-gray-300 px-4 py-2">{{ $loop->iteration }}</td>
-                                    <td class="border border-gray-300 px-4 py-2">{{ $produk->product_name }}</td>
-                                    <td class="border border-gray-300 px-4 py-2">{{ $produk->product_code }}</td>
-                                    <td class="border border-gray-300 px-4 py-2">{{ $produk->category }}</td>
-                                    <td class="border border-gray-300 px-4 py-2">{{ $produk->stock }}</td>
-                                    <td class="border border-gray-300 px-4 py-2">Rp. {{ number_format($produk->price, 0, ',', '.') }}</td>
+                                    <td class="border border-gray-300 px-4 py-2">{{ $item->product_name }}</td>
+                                    <td class="border border-gray-300 px-4 py-2">{{ $item->product_code }}</td>
+                                    <td class="border border-gray-300 px-4 py-2">{{ $item->category }}</td>
+                                    <td class="border border-gray-300 px-4 py-2">{{ $item->stock }}</td>
+                                    <td class="border border-gray-300 px-4 py-2">Rp. {{ number_format($item->price, 0, ',', '.') }}</td>
                                     <td class="border border-gray-300 px-4 py-2">
-                                        <a href="{{ route('products.edit', $produk->id_product) }}" 
+                                        <a href="#" 
                                            class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">
                                             Edit
                                         </a>
-                                        <form action="{{ route('products.destroy', $produk->id_product) }}" method="POST" class="inline">
+                                        <form action="" method="POST" class="inline">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" 
@@ -49,10 +49,11 @@
                                         </form>
                                     </td>
                                 </tr>
+                            @empty
                                 <tr>
                                     <td colspan="7" class="text-center py-4">No products available.</td>
                                 </tr>
-                            @endforeach
+                            @endforelse
                         </tbody>
                     </table>
 

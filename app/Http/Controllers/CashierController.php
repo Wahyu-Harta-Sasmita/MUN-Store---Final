@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Produk;
+use App\Models\TransactionDetail;
 use Illuminate\Http\Request;
 
 class CashierController extends Controller
@@ -11,9 +12,13 @@ class CashierController extends Controller
      * Display a listing of the resource.
      */
     public function dashboard()
-    {
-        return view('pages.home');
-    }
+{
+    $datas = Produk::paginate(2);
+
+    $transactionDetails = TransactionDetail::with('produk')->paginate(2);
+
+    return view('pages.home', compact('datas', 'transactionDetails'));
+}
 
     public function transaction()
     {

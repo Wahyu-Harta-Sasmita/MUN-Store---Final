@@ -78,24 +78,17 @@
                 </tr>
               </thead>
               <tbody>
+              @foreach ($datas as $data)
                 <tr class="border-b">
                   <td class="px-6 py-4 flex items-center">
                     <img src="{{ asset('assets/images/image.png') }}" alt="Product" class="w-10 h-10 mr-4" />
-                    <span>Jersey</span>
+                    <span>{{ $data['product_name'] }}</span>
                   </td>
-                  <td class="px-6 py-4">1</td>
-                  <td class="px-6 py-4">10000</td>
-                  <td class="px-6 py-4">2023-01-01</td>
+                  <td class="px-6 py-4">{{ $data['quantity'] }}</td>
+                  <td class="px-6 py-4">{{ $data['price'] }}</td>
+                  <td class="px-6 py-4">{{ $data['created_at'] }}</td>
                 </tr>
-                <tr class="border-b">
-                  <td class="px-6 py-4 flex items-center">
-                    <img src="{{ asset('assets/images/image.png') }}" alt="Product" class="w-10 h-10 mr-4" />
-                    <span>Jersey Home</span>
-                  </td>
-                  <td class="px-6 py-4">2</td>
-                  <td class="px-6 py-4">20000</td>
-                  <td class="px-6 py-4">2023-01-02</td>
-                </tr>
+                @endforeach
               </tbody>
             </table>
             <!-- Table End -->
